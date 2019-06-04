@@ -18,11 +18,11 @@
 <!--                <Column name="MESSAGE" pattern="%message" />-->
 <!--                <Column name="EXCEPTION" pattern= "%ex{full}"/>-->
             <Column name="LOG_ID" pattern="%u" isUnicode="false" />
-<!--            <Column name="ENTRY_DATE" isEventTimestamp="true" />-->
-<!--            <Column name="LOGGER" pattern="%logger" />-->
-<!--            <Column name="LOG_LEVEL" pattern="%level" />-->
-<!--            <Column name="MESSAGE" pattern="%m" />-->
-<!--            <Column name="EXCEPTION" pattern="%throwable " />-->
+            <Column name="ENTRY_DATE" isEventTimestamp="true" isUnicode="false" />
+<!--            <Column name="LOGGER" pattern="%logger" isUnicode="false" />-->
+            <Column name="LOG_LEVEL" pattern="%level" isUnicode="false" />
+            <Column name="MESSAGE" pattern="%m" isUnicode="false" />
+            <Column name="EXCEPTION" pattern="%throwable " isUnicode="false" />
         </JDBC>
     </Appenders>
 
