@@ -81,7 +81,6 @@ public class ConnectionJDBC {
             logger.info("Сообщение JDBC номер #{} уровня INFO.", 3);
             RowInserter.insertRow(connection, 3, "Некорректные данные", "не любит пельмени");
         }catch(SQLException e){
-        //}catch(Exception e){
             logger.error("Сообщение JDBC номер #{} уровня ERROR.", 3, e);
             connection.rollback(savepointA);
             System.out.println("Cработал генерируемый SQLException, запускается rollback() к точке A");

@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<!--<Configuration status="error">-->
 <Configuration>
 
     <Appenders>
@@ -8,18 +7,11 @@
             <PatternLayout pattern="%d{yyyy-MMM-dd hh:mm:ss a } %level %c - %m %n" />
         </Console>
 
-<!--        <JDBC name="JDBCAppender" tableName="LOGS">-->
         <JDBC name="JDBCAppender" tableName="APP_LOGS">
             <ConnectionFactory
                     class="ConnectionFactory" method="getConnection" />
-<!--                <Column name="ID" literal="LOGGING.APPLICATION_LOG_SEQUENCE.NEXTVAL" />-->
-<!--                <Column name="DATE" isEventTimestamp="true" />-->
-<!--                <Column name="LOG_LEVEL" pattern="%level" />-->
-<!--                <Column name="MESSAGE" pattern="%message" />-->
-<!--                <Column name="EXCEPTION" pattern= "%ex{full}"/>-->
             <Column name="LOG_ID" pattern="%u" isUnicode="false" />
             <Column name="ENTRY_DATE" isEventTimestamp="true" isUnicode="false" />
-<!--            <Column name="LOGGER" pattern="%logger" isUnicode="false" />-->
             <Column name="LOG_LEVEL" pattern="%level" isUnicode="false" />
             <Column name="MESSAGE" pattern="%m" isUnicode="false" />
             <Column name="EXCEPTION" pattern="%throwable " isUnicode="false" />

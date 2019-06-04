@@ -1,0 +1,27 @@
+"C:\Program Files\Java\jdk1.8.0_202\bin\java.exe" "-javaagent:C:\Program Files\JetBrains\IntelliJ IDEA 2019.1\lib\idea_rt.jar=63110:C:\Program Files\JetBrains\IntelliJ IDEA 2019.1\bin" -Dfile.encoding=UTF-8 -classpath "C:\Program Files\Java\jdk1.8.0_202\jre\lib\charsets.jar;C:\Program Files\Java\jdk1.8.0_202\jre\lib\deploy.jar;C:\Program Files\Java\jdk1.8.0_202\jre\lib\ext\access-bridge-64.jar;C:\Program Files\Java\jdk1.8.0_202\jre\lib\ext\cldrdata.jar;C:\Program Files\Java\jdk1.8.0_202\jre\lib\ext\dnsns.jar;C:\Program Files\Java\jdk1.8.0_202\jre\lib\ext\jaccess.jar;C:\Program Files\Java\jdk1.8.0_202\jre\lib\ext\jfxrt.jar;C:\Program Files\Java\jdk1.8.0_202\jre\lib\ext\localedata.jar;C:\Program Files\Java\jdk1.8.0_202\jre\lib\ext\nashorn.jar;C:\Program Files\Java\jdk1.8.0_202\jre\lib\ext\sunec.jar;C:\Program Files\Java\jdk1.8.0_202\jre\lib\ext\sunjce_provider.jar;C:\Program Files\Java\jdk1.8.0_202\jre\lib\ext\sunmscapi.jar;C:\Program Files\Java\jdk1.8.0_202\jre\lib\ext\sunpkcs11.jar;C:\Program Files\Java\jdk1.8.0_202\jre\lib\ext\zipfs.jar;C:\Program Files\Java\jdk1.8.0_202\jre\lib\javaws.jar;C:\Program Files\Java\jdk1.8.0_202\jre\lib\jce.jar;C:\Program Files\Java\jdk1.8.0_202\jre\lib\jfr.jar;C:\Program Files\Java\jdk1.8.0_202\jre\lib\jfxswt.jar;C:\Program Files\Java\jdk1.8.0_202\jre\lib\jsse.jar;C:\Program Files\Java\jdk1.8.0_202\jre\lib\management-agent.jar;C:\Program Files\Java\jdk1.8.0_202\jre\lib\plugin.jar;C:\Program Files\Java\jdk1.8.0_202\jre\lib\resources.jar;C:\Program Files\Java\jdk1.8.0_202\jre\lib\rt.jar;C:\Users\Gavrilov\IdeaProjects\com.part03.lesson16_v3\target\classes;C:\Users\Gavrilov\.m2\repository\org\apache\logging\log4j\log4j-core\2.10.0\log4j-core-2.10.0.jar;C:\Users\Gavrilov\.m2\repository\org\apache\logging\log4j\log4j-api\2.10.0\log4j-api-2.10.0.jar;C:\Users\Gavrilov\.m2\repository\org\apache\commons\commons-dbcp2\2.6.0\commons-dbcp2-2.6.0.jar;C:\Users\Gavrilov\.m2\repository\org\apache\commons\commons-pool2\2.6.1\commons-pool2-2.6.1.jar;C:\Users\Gavrilov\.m2\repository\commons-logging\commons-logging\1.2\commons-logging-1.2.jar;C:\Users\Gavrilov\.m2\repository\org\postgresql\postgresql\42.2.5\postgresql-42.2.5.jar" ConnectionJDBC
+2019-июн-04 07:13:21 PM  INFO ConnectionJDBC - Сообщение JDBC номер #1 уровня INFO.
+Параметризированная выборка: login_ID: 2019-05-28 21:09:00; name: Илья
+2019-июн-04 07:13:25 PM  INFO ConnectionJDBC - Сообщение JDBC номер #2 уровня INFO.
+2019-июн-04 07:13:25 PM  INFO ConnectionJDBC - Сообщение JDBC номер #3 уровня INFO.
+2019-июн-04 07:13:26 PM  ERROR ConnectionJDBC - Сообщение JDBC номер #3 уровня ERROR.
+org.postgresql.util.PSQLException: ОШИБКА: новая строка в отношении "ROLE" нарушает ограничение-проверку "ROLE_name_check"
+  Подробности: Ошибочная строка содержит (3, Некорректные данные, не любит пельмени).
+	at org.postgresql.core.v3.QueryExecutorImpl.receiveErrorResponse(QueryExecutorImpl.java:2440) ~[postgresql-42.2.5.jar:42.2.5]
+	at org.postgresql.core.v3.QueryExecutorImpl.processResults(QueryExecutorImpl.java:2183) ~[postgresql-42.2.5.jar:42.2.5]
+	at org.postgresql.core.v3.QueryExecutorImpl.execute(QueryExecutorImpl.java:308) ~[postgresql-42.2.5.jar:42.2.5]
+	at org.postgresql.jdbc.PgStatement.executeInternal(PgStatement.java:441) ~[postgresql-42.2.5.jar:42.2.5]
+	at org.postgresql.jdbc.PgStatement.execute(PgStatement.java:365) ~[postgresql-42.2.5.jar:42.2.5]
+	at org.postgresql.jdbc.PgPreparedStatement.executeWithFlags(PgPreparedStatement.java:143) ~[postgresql-42.2.5.jar:42.2.5]
+	at org.postgresql.jdbc.PgPreparedStatement.execute(PgPreparedStatement.java:132) ~[postgresql-42.2.5.jar:42.2.5]
+	at org.apache.commons.dbcp2.DelegatingPreparedStatement.execute(DelegatingPreparedStatement.java:94) ~[commons-dbcp2-2.6.0.jar:2.6.0]
+	at org.apache.commons.dbcp2.DelegatingPreparedStatement.execute(DelegatingPreparedStatement.java:94) ~[commons-dbcp2-2.6.0.jar:2.6.0]
+	at RowInserter.insertRow(RowInserter.java:34) ~[classes/:?]
+	at ConnectionJDBC.main(ConnectionJDBC.java:82) [classes/:?]
+Cработал генерируемый SQLException, запускается rollback() к точке A
+Печатаем содержимое таблицы APP_LOGS:
+ae8a2ce1-86e3-11e9-9fdd-002243036344 2019-06-04 19:13:21.993 INFO Сообщение JDBC номер #1 уровня INFO.
+aeaf8f32-86e3-11e9-9fdd-002243036344 2019-06-04 19:13:25.637 INFO Сообщение JDBC номер #2 уровня INFO.
+aed0f9e3-86e3-11e9-9fdd-002243036344 2019-06-04 19:13:25.865 INFO Сообщение JDBC номер #3 уровня INFO.
+aef43954-86e3-11e9-9fdd-002243036344 2019-06-04 19:13:26.057 ERROR Сообщение JDBC номер #3 уровня ERROR.
+
+Process finished with exit code 0

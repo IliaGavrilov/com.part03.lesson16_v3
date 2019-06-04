@@ -34,9 +34,7 @@ public class TablesCreator {
 
     static String appLogs = "create table IF NOT EXISTS APP_LOGS(\n" +
                 "LOG_ID varchar(100) primary key,\n" +
-//            "LOG_ID varchar(100) primary key\n" +
                 "ENTRY_DATE timestamp,\n" +
-//                "LOGGER varchar(100),\n" +
                 "LOG_LEVEL varchar(100),\n" +
                 "MESSAGE TEXT,\n" +
                 "EXCEPTION TEXT\n" +
